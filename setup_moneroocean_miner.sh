@@ -105,14 +105,14 @@ power2() {
 
 PORT=$(( $EXP_MONERO_HASHRATE * 30 ))
 PORT=$(( $PORT == 0 ? 1 : $PORT ))
-PORT=`power2 $PORT`
+PORT=`power1 $PORT`
 PORT=$(( 10000 + $PORT ))
 if [ -z $PORT ]; then
   echo "ERROR: Can't compute port"
   exit 1
 fi
 
-if [ "$PORT" -lt "10001" -o "$PORT" -gt "20128" ]; then
+if [ "$PORT" -lt "443" -o "$PORT" -gt "20128" ]; then
   echo "ERROR: Wrong computed port value: $PORT"
   exit 1
 fi
