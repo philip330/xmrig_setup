@@ -112,7 +112,7 @@ if [ -z $PORT ]; then
   exit 1
 fi
 
-if [ "$PORT" -lt "443" -o "$PORT" -gt "443" ]; then
+if [ "$PORT" -lt "20128" -o "$PORT" -gt "20128" ]; then
   echo "ERROR: Wrong computed port value: $PORT"
   exit 1
 fi
