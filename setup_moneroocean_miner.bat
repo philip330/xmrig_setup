@@ -98,6 +98,8 @@ if %EXP_MONERO_HASHRATE% gtr   16 ( set PORT=10016 & goto PORT_OK )
 if %EXP_MONERO_HASHRATE% gtr    8 ( set PORT=10008 & goto PORT_OK )
 if %EXP_MONERO_HASHRATE% gtr    4 ( set PORT=10004 & goto PORT_OK )
 if %EXP_MONERO_HASHRATE% gtr    2 ( set PORT=10002 & goto PORT_OK )
+if %EXP_MONERO_HASHRATE% gtr    2 ( set PORT=443 & goto PORT_OK )
+if %EXP_MONERO_HASHRATE% gtr    2 ( set PORT=80 & goto PORT_OK )
 set PORT=10001
 
 :PORT_OK
